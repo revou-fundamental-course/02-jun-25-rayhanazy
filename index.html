@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+  <!-- Header dan Navbar -->
+  <header>
+    <div class="logo">👨‍🏫</div>
+    <nav>
+      <button>Home</button>
+      <button>Our Profile</button>
+      <button>Achievement</button>
+      <button>Message Us</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Hi Name, Welcome To Website</h2>
+    <p>Ini adalah website latihan pertama</p>
+    <div class="image-placeholder">1366x578</div>
+  </section>
+
+  <!-- Facilitation Section -->
+  <section class="facilitation">
+    <h3>Our Facilitation</h3>
+    <div class="facilities">
+      <div class="facility">
+        <div class="circle"></div>
+        <p>Professional Teacher</p>
+      </div>
+      <div class="facility">
+        <div class="circle"></div>
+        <p>Sport Field</p>
+      </div>
+      <div class="facility">
+        <div class="circle"></div>
+        <p>Classroom</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message Us Section -->
+  <section class="message-us">
+    <h3>Message Us</h3>
+    <div class="form-section">
+      <form id="messageForm">
+        <div class="form-group">
+          <label for="name">Nama :</label>
+          <input type="text" id="name" placeholder="Nama" required />
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Tanggal Lahir :</label>
+          <input type="date" id="dob" required />
+        </div>
+
+        <div class="form-group">
+          <label>Jenis Kelamin :</label>
+          <label><input type="radio" name="gender" value="Laki-Laki" required /> Laki-Laki</label>
+          <label><input type="radio" name="gender" value="Perempuan" /> Perempuan</label>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Pesan :</label>
+          <textarea id="message" placeholder="Pesan" required></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div class="message-display" id="messageDisplay">
+        <p><strong>Current time :</strong> -</p>
+        <p><strong>Nama :</strong> -</p>
+        <p><strong>Tanggal Lahir :</strong> -</p>
+        <p><strong>Jenis Kelamin :</strong> -</p>
+        <p><strong>Pesan :</strong> -</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Created By RevoU
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

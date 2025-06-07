@@ -34,8 +34,8 @@ function changeHeroBackground() {
   heroIndex = (heroIndex + 1) % heroImages.length;
 }
 
-changeHeroBackground(); // show first image
-setInterval(changeHeroBackground, 3000); // change every 3 seconds
+changeHeroBackground(); 
+setInterval(changeHeroBackground, 3000); 
 
 
 
@@ -99,10 +99,9 @@ function startDescTyping() {
 userInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     e.preventDefault();
-    const name = userInput.innerText.trim();
+    const name = userInput.innerText.trim().toUpperCase();
     if (name !== "") {
       userInput.blur();
-      userInput.style.backgroundColor = "#d1f7c4"; // ubah warna setelah isi
       updateTitleWithTyping(name);
     }
   }
@@ -115,6 +114,7 @@ userInput.addEventListener('blur', updateWidth);
 
 // Inisialisasi lebar saat load
 updateWidth();
+
 
 
 

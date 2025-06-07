@@ -1,134 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
-  <link rel="stylesheet" href="css\style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
-
   <!-- Header dan Navbar -->
   <header>
-  <div class="logo"><img src="img/logo-revou.png" alt=""></div>
-  <nav class="navbar">
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact Us</a>
-  </nav>
-</header>
-
+    <div class="logo"><img src="img/logo-revou.png" alt="" /></div>
+    <nav class="navbar">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
-<div class="hero" id="hero">
-  <div id="particles-js"></div>
-  <div class="hero-content">
-   <h1 class="typewriter" id="heroTitle">
-  HI <span contenteditable="true" id="username" class="editable" data-placeholder="Type Your Name"></span>
-</h1>
-<p id="heroDesc" class="description"></p>
-  </div>
-</div>
-  </section>
-
-  <!-- About Section -->
-<section class="about" id="about">
-  <h2 class="section-title" data-aos="fade-down" data-aos-duration="1000">
-    <i class="fas fa-user"></i> About <span>Me</span>
-  </h2>
-
-  <div class="about-container">
-    <div class="about-image" data-aos="fade-right" data-aos-duration="1200">
-  <lottie-player
-    src="https://assets4.lottiefiles.com/packages/lf20_w51pcehl.json"
-    background="transparent"
-    speed="1"
-    style="width: 600px; height: auto;"
-    loop
-    autoplay>
-  </lottie-player>
-</div>
-    <div class="about-content" data-aos="fade-left" data-aos-duration="1200">
-      <h3>I'm Rayhan</h3>
-      <h4>Informatics Engineering Student</h4>
-      <p>
-        I am an Informatics Engineering student at Krisnadwipayana University with a strong passion for improving my coding and web development skills. Currently, I am focusing on front-end development and continuously learning to create responsive, interactive, and visually appealing user interfaces.
-      </p>
-      <p><strong>Email :</strong> <a href="mailto:rayhanalim04@gmail.com">rayhanalim04@gmail.com</a></p>
-      <p><strong>Place :</strong> Bekasi, Indonesia</p>
-      <a href="https://drive.google.com/file/d/16nt0qiv0kUtPasrDkMW5mynPoVS_keIG/view?usp=sharing" target="_blank" class="resume-btn">Resume ›</a>
+  <div class="hero" id="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1 class="typewriter" id="heroTitle">
+        HI <span contenteditable="true" id="username" class="editable" data-placeholder="Type Your Name"></span>
+      </h1>
+      <p id="heroDesc" class="description"></p>
     </div>
   </div>
-</section>
 
-<!-- Skills Section -->
-<section class="skills" id="skills">
-  <h2 class="section-title" data-aos="fade-down"><i class="fas fa-tools"></i> My <span>Skills</span></h2>
-  <div class="skills-grid">
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2 class="section-title">
+      <i class="fas fa-user"></i> About <span>Me</span>
+    </h2>
+    <div class="about-container">
+      <div class="about-image">
+        <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_w51pcehl.json" background="transparent" speed="1" style="width: 600px; height: auto;" loop autoplay></lottie-player>
+      </div>
+      <div class="about-content">
+        <h3>I'm Rayhan</h3>
+        <h4>Informatics Engineering Student</h4>
+        <p>I am an Informatics Engineering student at Krisnadwipayana University with a strong passion for improving my coding and web development skills. Currently, I am focusing on front-end development and continuously learning to create responsive, interactive, and visually appealing user interfaces.</p>
+        <p><strong>Email :</strong> <a href="mailto:rayhanalim04@gmail.com">rayhanalim04@gmail.com</a></p>
+        <p><strong>Place :</strong> Bekasi, Indonesia</p>
+        <a href="https://drive.google.com/file/d/..." target="_blank" class="resume-btn">Resume ›</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Soft Skills -->
-<div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-  <h3><i class="fas fa-brain pulse"></i> Soft Skills</h3>
-  <ul>
-    <li data-aos="fade-right" data-aos-delay="150"><i class="fas fa-lightbulb"></i> Analysis Ability</li>
-    <li data-aos="fade-right" data-aos-delay="250"><i class="fas fa-user-check"></i> Critical Thinking</li>
-    <li data-aos="fade-right" data-aos-delay="350"><i class="fas fa-tools"></i> Problem Solving</li>
-    <li data-aos="fade-right" data-aos-delay="450"><i class="fas fa-comments"></i> Communication</li>
-    <li data-aos="fade-right" data-aos-delay="550"><i class="fas fa-users"></i> Teamwork</li>
-  </ul>
-</div>
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2 class="section-title"><i class="fas fa-tools"></i> My <span>Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card1">
+        <h3><i class="fas fa-brain pulse"></i> Soft Skills</h3>
+        <ul>
+          <li><i class="fas fa-lightbulb"></i> Analysis Ability</li>
+          <li><i class="fas fa-user-check"></i> Critical Thinking</li>
+          <li><i class="fas fa-tools"></i> Problem Solving</li>
+          <li><i class="fas fa-comments"></i> Communication</li>
+          <li><i class="fas fa-users"></i> Teamwork</li>
+        </ul>
+      </div>
 
-<!-- Software -->
-<div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-  <h3><i class="fas fa-laptop-code pulse"></i> Software</h3>
-  <ul>
-    <li data-aos="fade-right" data-aos-delay="250"><i class="fas fa-laptop"></i> Visual Studio Code</li>
-    <li data-aos="fade-right" data-aos-delay="350"><i class="fab fa-figma"></i> Figma</li>
-    <li data-aos="fade-right" data-aos-delay="450"><i class="fas fa-file-alt"></i> Microsoft Office</li>
-    <li data-aos="fade-right" data-aos-delay="550"><i class="fas fa-database"></i> phpMyAdmin</li>
-    <li data-aos="fade-right" data-aos-delay="650"><i class="fas fa-server"></i> XAMPP</li>
-  </ul>
-</div>
+      <div class="skill-card2">
+        <h3><i class="fas fa-laptop-code pulse"></i> Software</h3>
+        <ul>
+          <li><i class="fas fa-laptop"></i> Visual Studio Code</li>
+          <li><i class="fab fa-figma"></i> Figma</li>
+          <li><i class="fas fa-file-alt"></i> Microsoft Office</li>
+          <li><i class="fas fa-database"></i> phpMyAdmin</li>
+          <li><i class="fas fa-server"></i> XAMPP</li>
+        </ul>
+      </div>
 
-<!-- Hard Skills -->
-<div class="skill-card" data-aos="fade-up" data-aos-delay="300">
-  <h3><i class="fas fa-code pulse"></i> Hard Skills</h3>
-  <ul>
-    <li data-aos="fade-right" data-aos-delay="350"><i class="fab fa-html5"></i> HTML</li>
-    <li data-aos="fade-right" data-aos-delay="450"><i class="fab fa-css3-alt"></i> CSS</li>
-    <li data-aos="fade-right" data-aos-delay="550"><i class="fab fa-js-square"></i> JavaScript</li>
-    <li data-aos="fade-right" data-aos-delay="650"><i class="fas fa-pencil-ruler"></i> UI/UX Design</li>
-  </ul>
-</div>
+      <div class="skill-card3">
+        <h3><i class="fas fa-code pulse"></i> Hard Skills</h3>
+        <ul>
+          <li><i class="fab fa-html5"></i> HTML</li>
+          <li><i class="fab fa-css3-alt"></i> CSS</li>
+          <li><i class="fab fa-js-square"></i> JavaScript</li>
+          <li><i class="fas fa-pencil-ruler"></i> UI/UX Design</li>
+        </ul>
+      </div>
 
-<!-- Languages -->
-<div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-  <h3><i class="fas fa-language pulse"></i> Languages</h3>
-  <ul>
-    <li data-aos="fade-right" data-aos-delay="450"><i class="fas fa-flag"></i> Indonesian (Native)</li>
-    <li data-aos="fade-right" data-aos-delay="550"><i class="fas fa-flag-usa"></i> English (Basic)</li>
-  </ul>
-</div>
-  </div>
-</section>
+      <div class="skill-card4">
+        <h3><i class="fas fa-language pulse"></i> Languages</h3>
+        <ul>
+          <li><i class="fas fa-flag"></i> Indonesian (Native)</li>
+          <li><i class="fas fa-flag-usa"></i> English (Basic)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
 
 <!-- Contact Section -->
 <section class="contact" id="contact">
-  <h2 class="section-title" data-aos="fade-down" data-aos-duration="1000">
+  <h2 class="section-title">
     <i class="fas fa-headset"></i> Get In <span>Touch</span>
   </h2>
   
-  <div class="contact-container" data-aos="fade-up" data-aos-duration="1200">
-    <div class="contact-image" data-aos="fade-right" data-aos-duration="1200">
+  <div class="contact-container">
+    <div class="contact-image">
       <lottie-player
         src="img\animation.json"
-        background="transparent"
+        background="none"
         speed="1"
         style="width: 100%; max-width: 400px; height: auto;"
         loop
@@ -136,20 +117,20 @@
       </lottie-player>
     </div>
 
-    <form id="contactForm" data-aos="fade-left" data-aos-duration="1200">
-      <div class="form-group">
+    <form id="contactForm">
+      <div class="form-group1">
         <i class="fas fa-user"></i>
         <input type="text" id="name" placeholder="Name" required />
       </div>
-      <div class="form-group">
+      <div class="form-group2">
         <i class="fas fa-envelope"></i>
         <input type="email" id="email" placeholder="Email" required />
       </div>
-      <div class="form-group">
+      <div class="form-group3">
         <i class="fas fa-phone"></i>
         <input type="tel" id="phone" placeholder="Phone" required />
       </div>
-      <div class="form-group">
+      <div class="form-group4">
         <i class="fas fa-comment-dots"></i>
         <input id="message" placeholder="Message" required></input>
       </div>
@@ -218,55 +199,228 @@
   <script src="js\script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script>
-  particlesJS('particles-js', {
-    particles: {
-      number: { value: 80 },
-      color: { value: "#ffffff" },
-      shape: { type: "circle" },
-      opacity: { value: 0.5 },
-      size: { value: 3 },
-      line_linked: {
-        enable: true,
-        distance: 150,
-        color: "#ffffff",
-        opacity: 0.4,
-        width: 1
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: { enable: true, speed: 2 }
       },
-      move: {
-        enable: true,
-        speed: 2
-      }
-    },
-    interactivity: {
-      events: {
-        onhover: { enable: true, mode: "repulse" }
-      }
-    },
-    retina_detect: true
-  });
-</script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
   ScrollReveal().reveal('.hero-content', {
     origin: 'bottom',
-    distance: '50px',
+    distance: '80px',
     duration: 1000,
     delay: 200,
     easing: 'ease-in-out',
     reset: true 
   });
-</script>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    once: false,     
-    mirror: true,    
-    duration: 1000,  
-    offset: 120      
+  ScrollReveal().reveal('.section-title', {
+    origin: 'top',
+    distance: '80px',
+    duration: 1000,
+    delay: 200,
+    easing: 'ease-in-out',
+    reset: true 
   });
-</script>
 
+  ScrollReveal().reveal('.section-title i', {
+    origin: 'left',
+    distance: '80px',
+    duration: 2000,
+    delay: 200,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.about-image', {
+    origin: 'left',
+    distance: '80px',
+    duration: 1000,
+    delay: 500,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.about-content', {
+    origin: 'rigth',
+    distance: '80px',
+    duration: 1000,
+    delay: 200,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+  ScrollReveal().reveal('.about-content h3', {
+    origin: 'rigth',
+    distance: '80px',
+    duration: 1000,
+    delay: 500,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+  ScrollReveal().reveal('.about-content h4', {
+    origin: 'rigth',
+    distance: '80px',
+    duration: 1000,
+    delay: 800,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+  ScrollReveal().reveal('.about-content p', {
+    origin: 'rigth',
+    distance: '80px',
+    duration: 1000,
+    delay: 1200,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+  ScrollReveal().reveal('.about-content p a', {
+    origin: 'rigth',
+    distance: '80px',
+    duration: 1000,
+    delay: 1500,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.resume-btn', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    delay: 1800,
+    easing: 'ease-in-out',
+    reset: true 
+  }); 
+
+  ScrollReveal().reveal('.skill-card1', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    delay: 200,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.skill-card2', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    delay: 400,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.skill-card3', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    delay: 600,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.skill-card4', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    delay: 800,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.contact-image', {
+    origin: 'left',
+    distance: '80px',
+    duration: 1000,
+    delay: 400,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.contact-container', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    delay: 200,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.form-group1', {
+    origin: 'rigth',
+    distance: '80px',
+    duration: 1000,
+    delay: 200,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.form-group2', {
+    origin: 'rigth',
+    distance: '80px',
+    duration: 1000,
+    delay: 500,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.form-group3', {
+    origin: 'rigth',
+    distance: '80px',
+    duration: 1000,
+    delay: 800,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+  
+  ScrollReveal().reveal('.form-group4', {
+    origin: 'rigth',
+    distance: '80px',
+    duration: 1000,
+    delay: 1200,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.submit-btn', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    delay: 1500,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+  ScrollReveal().reveal('.popup', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    delay: 500,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {

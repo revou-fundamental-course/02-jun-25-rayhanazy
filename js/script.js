@@ -107,4 +107,46 @@ links.forEach(link => {
 
 
 
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+
+  window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section');
+  const scrollY = window.scrollY;
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 200;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      document.querySelectorAll('.navbar a').forEach((link) => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+});
+
+
+
+
+
+
+
+
 

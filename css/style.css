@@ -1,4 +1,4 @@
-/* Reset */
+/* HTML */
 html {
   scroll-behavior: smooth;
   margin: 0;
@@ -9,7 +9,7 @@ html::-webkit-scrollbar {
   width: 0.8rem;
 }
 html::-webkit-scrollbar-track {
-  background: rgb(255, 255, 255);
+  background: rgb(255, 177, 221);
 }
 html::-webkit-scrollbar-thumb {
   background: rgb(43, 227, 255);
@@ -48,7 +48,7 @@ section {
     opacity: 0;
     transition: opacity 1s ease-in-out;
   }
-
+/* Header styling */
 header {
   position: fixed;
   top: 0;
@@ -124,6 +124,12 @@ header {
   background-color: orange;
 }
 
+.navbar a.active {
+  color: orange; /* warna aktif */
+  font-weight: bold;
+  border-bottom: 2px solid orange;
+}
+
 
 #particles-js {
   position: absolute;
@@ -135,7 +141,7 @@ header {
 }
 
 .hero {
-  margin: 160px 0 0 0;
+  margin: 150px 0 0 0;
   width: 100%;
   height: 578px;
   background-size: cover;
@@ -334,7 +340,7 @@ header {
 
 .section-title {
   font-size: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   color: #222;
 }
 
@@ -350,7 +356,8 @@ header {
   margin: 0 auto;
 }
 
-.skill-card {
+.skill-card1, .skill-card2, .skill-card3, .skill-card4 {
+  text-align: left;
   background: #fff;
   border-radius: 12px;
   padding: 20px 25px;
@@ -358,17 +365,17 @@ header {
   transition: transform 0.3s ease;
 }
 
-.skill-card:hover {
+.skill-card1:hover, .skill-card2:hover, .skill-card3:hover, .skill-card4:hover {
   transform: translateY(-6px);
 }
 
-.skill-card h3 {
+.skill-card1 h3, .skill-card2 h3, .skill-card3 h3, .skill-card4 h3 {
   font-size: 20px;
   margin-bottom: 15px;
   color: #0077cc;
 }
 
-.skill-card ul {
+.skill-card1 ul, .skill-card2 ul, .skill-card3 ul, .skill-card4 ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -392,7 +399,7 @@ header {
   animation: pulse 2s infinite;
 }
 
-.skill-card ul li {
+.skill-card1 ul li, .skill-card2 ul li, .skill-card3 ul li, .skill-card4 ul li {
   font-size: 16px;
   color: #333;
   margin-bottom: 8px;
@@ -401,12 +408,13 @@ header {
 }
 
 
-.skill-card i {
+.skill-card1 i, .skill-card2 i, .skill-card3 i, .skill-card4 i {
+  font-size: 20px;
   margin-right: 10px;
   color: #0077cc;
 }
 
-.skill-card ul li:hover {
+.skill-card1 ul li:hover, .skill-card2 ul li:hover, .skill-card3 ul li:hover, .skill-card4 ul li:hover {
   color: #0077cc;
   transform: translateX(8px);
 }
@@ -443,7 +451,10 @@ form {
   width: 100%;
 }
 
-.form-group {
+.form-group1,
+.form-group2,
+.form-group3,
+.form-group4 {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -452,13 +463,32 @@ form {
   padding: 10px;
 }
 
-.form-group i {
+.form-group1 i,
+.form-group2 i,
+.form-group3 i,
+.form-group4 i {
+  font-size: 20px;
   margin-right: 10px;
   color: #333;
 }
 
-.form-group input,
-.form-group textarea {
+.form-group1 input,
+.form-group2 input,
+.form-group3 input,
+.form-group4 input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group1 textarea,
+.form-group2 textarea,
+.form-group3 textarea,
+.form-group4 textarea {
+  flex: 1;
   border: none;
   background: transparent;
   outline: none;
@@ -572,7 +602,7 @@ body.noscroll {
 
 
 .footer {
-  padding: 40px 20px;
+  padding: 40px 20px 20px 20px;
   background-color: #06022b;
   position: relative;
   color: white;

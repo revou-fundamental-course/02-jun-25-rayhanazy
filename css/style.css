@@ -1,47 +1,183 @@
-* {
+/* Reset */
+html {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+  overflow-x: hidden;
 }
 
-body {
-  background-color: white;
-  color: black;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+  
+  body {
+    font-family: 'Inria Serif', serif;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Animasi untuk halaman yang keluar */
+  body.exit {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
 
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid black;
+  align-items: flex-start;
+  padding: 10px 100px 10px 50px;
+  border-bottom: 2px solid black;
 }
 
-.logo {
-  font-size: 24px;
+.logo img {
+  height: 60px;
+  object-fit: cover;
 }
 
-nav button {
-  margin-left: 10px;
-  padding: 5px 10px;
+/* Navbar styling */
+.navbar {
+  display: flex;
+  border: 1px solid #000;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%; 
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+/* Button styling dalam navbar */
+.navbar button {
+  flex: 1; 
+  padding: 10px 0;
+  border: none;
+  border-left: 1px solid #000;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Hilangkan border kiri untuk button pertama */
+.navbar button:first-child {
+  border-left: none;
+}
+
+/* Hover effect */
+.navbar button:hover {
+  background-color: #f0f0f0;
 }
 
 .hero {
-  padding: 20px;
-  border-bottom: 1px solid black;
-  text-align: left;
+  width: 100%;
+  height: 578px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: center;
+  transition: background-image 1s ease-in-out;
+  position: relative;
 }
 
-.image-placeholder {
-  width: 100%;
-  height: 300px;
-  border: 1px solid gray;
-  margin-top: 20px;
-  text-align: center;
-  line-height: 300px;
-  color: gray;
+.hero-content {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px 40px;
+  border-radius: 10px;
 }
+
+/* Typewriter Style */
+.editable {
+  padding: 2px 8px;
+  outline: none;
+  color: #2c3e50;
+  font-weight: bold;
+  display: inline-block;
+  cursor: text;
+  position: relative;
+  text-align: left;
+  white-space: nowrap; 
+  min-width: 0; 
+  width: auto;
+}
+
+/* Placeholder */
+.editable:empty::before {
+  content: attr(data-placeholder);
+  color: #000000;
+  font-weight: normal;
+  pointer-events: none;
+  position: absolute;
+  animation: blink-placeholder 1s step-end infinite;
+}
+
+/* Efek placeholder blinking */
+@keyframes blink-placeholder {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.description {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #34495e;
+  max-width: 700px;
+  margin: 20px auto 0;
+  line-height: 1.6;
+  min-height: 50px;
+}
+
+
+/* Tambahan styling untuk teks */
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+.slider {
+  width: 100%;
+  max-height: 578px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
 
 .facilitation {
   padding: 20px;
@@ -71,6 +207,11 @@ nav button {
 
 .message-us h3 {
   margin-bottom: 20px;
+}
+
+section .message-us {
+  padding: 20px;
+  
 }
 
 .form-section {

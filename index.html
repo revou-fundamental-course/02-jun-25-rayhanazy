@@ -14,14 +14,15 @@
 
   <!-- Header dan Navbar -->
   <header>
-    <div class="logo"><img src="img/logo-revou.png" alt=""></div>
-    <nav class="navbar">
-      <button>Home</button>
-      <button>About</button>
-      <button>Skills</button>
-      <button>Message Us</button>
-    </nav>
-  </header>
+  <div class="logo"><img src="img/logo-revou.png" alt=""></div>
+  <nav class="navbar">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header>
+
 
   <!-- Hero Section -->
 <div class="hero" id="hero">
@@ -36,7 +37,7 @@
   </section>
 
   <!-- About Section -->
-<section class="about">
+<section class="about" id="about">
   <h2 class="section-title" data-aos="fade-down" data-aos-duration="1000">
     <i class="fas fa-user"></i> About <span>Me</span>
   </h2>
@@ -116,48 +117,102 @@
   </div>
 </section>
 
-  <!-- Message Us Section -->
-  <section class="message-us">
-    <h3>Message Us</h3>
-    <div class="form-section">
-      <form id="messageForm">
-        <div class="form-group">
-          <label for="name">Nama :</label>
-          <input type="text" id="name" placeholder="Nama" required />
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2 class="section-title" data-aos="fade-down" data-aos-duration="1000">
+    <i class="fas fa-headset"></i> Get In <span>Touch</span>
+  </h2>
+  
+  <div class="contact-container" data-aos="fade-up" data-aos-duration="1200">
+    <div class="contact-image" data-aos="fade-right" data-aos-duration="1200">
+      <lottie-player
+        src="img\animation.json"
+        background="transparent"
+        speed="1"
+        style="width: 100%; max-width: 400px; height: auto;"
+        loop
+        autoplay>
+      </lottie-player>
+    </div>
+
+    <form id="contactForm" data-aos="fade-left" data-aos-duration="1200">
+      <div class="form-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="name" placeholder="Name" required />
+      </div>
+      <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" placeholder="Email" required />
+      </div>
+      <div class="form-group">
+        <i class="fas fa-phone"></i>
+        <input type="tel" id="phone" placeholder="Phone" required />
+      </div>
+      <div class="form-group">
+        <i class="fas fa-comment-dots"></i>
+        <input id="message" placeholder="Message" required></input>
+      </div>
+      <button type="submit" class="submit-btn">
+        Submit <i class="fas fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+</section>
+
+
+
+<!-- Popup -->
+<div id="popupOverlay" class="popup-overlay">
+  <div class="popup">
+    <h3>Message Submitted!</h3>
+    <p><strong>Name:</strong> <span id="popupName"></span></p>
+    <p><strong>Email:</strong> <span id="popupEmail"></span></p>
+    <p><strong>Phone:</strong> <span id="popupPhone"></span></p>
+    <p><strong>Message:</strong> <span id="popupMsg"></span></p>
+    <p><strong>Submitted At:</strong> <span id="popupTime"></span></p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+  
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-box">
+        <h2>Rayhan Portfolio</h2>
+        <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
+        <p>Keep Rising 🚀.</p>
+      </div>
+      <div class="footer-box">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><i class="fas fa-chevron-circle-right"></i><a href="#hero">Home</a></li>
+          <li><i class="fas fa-chevron-circle-right"></i><a href="#about">About</a></li>
+          <li><i class="fas fa-chevron-circle-right"></i><a href="#skills">Skills</a></li>
+          <li><i class="fas fa-chevron-circle-right"></i><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h2>Contact Info</h2>
+        <p><i class="fas fa-phone"></i> +62 XXX-XXXX-XXXX</p>
+        <p><i class="fas fa-envelope"></i> rayhanalim04@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Bekasi, Indonesia</p>
+        <div class="socials">
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-github"></i>
+          <i class="fas fa-envelope"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fas fa-paper-plane"></i>
         </div>
-
-        <div class="form-group">
-          <label for="dob">Tanggal Lahir :</label>
-          <input type="date" id="dob" required />
-        </div>
-
-        <div class="form-group">
-          <label>Jenis Kelamin :</label>
-          <label><input type="radio" name="gender" value="Laki-Laki" required /> Laki-Laki</label>
-          <label><input type="radio" name="gender" value="Perempuan" /> Perempuan</label>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Pesan :</label>
-          <textarea id="message" placeholder="Pesan" required></textarea>
-        </div>
-
-        <button type="submit">Submit</button>
-      </form>
-
-      <div class="message-display" id="messageDisplay">
-        <p><strong>Current time :</strong> -</p>
-        <p><strong>Nama :</strong> -</p>
-        <p><strong>Tanggal Lahir :</strong> -</p>
-        <p><strong>Jenis Kelamin :</strong> -</p>
-        <p><strong>Pesan :</strong> -</p>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    Created By RevoU
+    <hr>
+    <div class="footer-bottom">
+      <p>Designed With <span class="heart">❤️</span> By <span class="author">Rayhan</span></p>
+    </div>
   </footer>
 
   <script src="js\script.js"></script>
@@ -201,9 +256,62 @@
     reset: true 
   });
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    once: false,     
+    mirror: true,    
+    duration: 1000,  
+    offset: 120      
+  });
 </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contactForm');
+  const overlay = document.getElementById('popupOverlay');
+  const popup = overlay.querySelector('.popup');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Ambil data input
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    // Tampilkan ke popup
+    document.getElementById('popupName').innerText = name;
+    document.getElementById('popupEmail').innerText = email;
+    document.getElementById('popupPhone').innerText = phone;
+    document.getElementById('popupMsg').innerText = message;
+
+    const now = new Date();
+    const timeString = now.toLocaleString();
+    document.getElementById('popupTime').innerText = timeString;
+
+    // Tampilkan popup
+    overlay.style.display = 'flex';
+    document.body.classList.add('noscroll');
+
+    // Reset form
+    form.reset();
+
+    // Tutup popup otomatis setelah 5 detik
+    setTimeout(() => {
+      closePopup();
+    }, 5000);
+  });
+
+  window.closePopup = function () {
+    overlay.style.display = 'none';
+    document.body.classList.remove('noscroll');
+  }
+});
+</script>
+
 </body>
 </html>

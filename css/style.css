@@ -10,10 +10,10 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
   
   body {
-    font-family: 'Inria Serif', serif;
     margin: 0;
     padding: 0;
     opacity: 0;
@@ -83,7 +83,17 @@ header {
   background-color: #f0f0f0;
 }
 
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
 .hero {
+  margin: 60px 0 0 0;
   width: 100%;
   height: 578px;
   background-size: cover;
@@ -95,12 +105,15 @@ header {
   text-align: center;
   transition: background-image 1s ease-in-out;
   position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
   background: rgba(255, 255, 255, 0.7);
   padding: 20px 40px;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Typewriter Style */
@@ -179,31 +192,183 @@ header {
 }
 
 
-.facilitation {
-  padding: 20px;
-  border-bottom: 1px solid black;
+.section-title {
+  text-align: center;
+  font-size: 2.7rem;
+  margin-bottom: 80px;
 }
 
-.facilitation h3 {
-  margin-bottom: 20px;
+.section-title i {
+  margin-right: 10px;
+  color: #000;
 }
 
-.facilities {
+.section-title span {
+  color: #1700ab;
+}
+
+#tsparticles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+.about {
+  padding: 100px 0 200px 0;
+  background-color: #f5f5f5;
+  position: relative;
+  z-index: 1;
+}
+
+.about-container {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 60px 0 0;
 }
 
-.facility {
+.about-image img {
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.about-content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1700ab;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.about-content .resume-btn {
+  color: white;
+}
+
+.about-content a {
+  text-decoration: none;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #1700ab;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(15, 1, 163, 0.4);
+  transition: background 0.3s;
+}
+
+.resume-btn:hover {
+  background-color: #1a00cc;
+}
+
+.skills {
+  padding: 120px 20px;
+  background: #d6e7f8;
   text-align: center;
 }
 
-.circle {
-  width: 80px;
-  height: 80px;
-  border: 1px solid black;
-  border-radius: 50%;
-  margin: 0 auto 10px auto;
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #222;
 }
+
+.section-title span {
+  color: #0077cc;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #0077cc;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+/* Animasi pulse untuk ikon */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    color: #0077cc;
+  }
+  50% {
+    transform: scale(1.2);
+    color: #005fa3;
+  }
+}
+
+.pulse {
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+.skill-card ul li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  cursor: default;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.skill-card i {
+  margin-right: 10px;
+  color: #0077cc;
+}
+
+.skill-card ul li:hover {
+  color: #0077cc;
+  transform: translateX(8px);
+}
+
 
 .message-us h3 {
   margin-bottom: 20px;

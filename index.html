@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="css\style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
@@ -13,14 +17,15 @@
     <div class="logo"><img src="img/logo-revou.png" alt=""></div>
     <nav class="navbar">
       <button>Home</button>
-      <button>Our Profile</button>
-      <button>Achievement</button>
+      <button>About</button>
+      <button>Skills</button>
       <button>Message Us</button>
     </nav>
   </header>
 
   <!-- Hero Section -->
 <div class="hero" id="hero">
+  <div id="particles-js"></div>
   <div class="hero-content">
    <h1 class="typewriter" id="heroTitle">
   HI <span contenteditable="true" id="username" class="editable" data-placeholder="Type Your Name"></span>
@@ -28,28 +33,88 @@
 <p id="heroDesc" class="description"></p>
   </div>
 </div>
-
-
   </section>
 
-  <!-- Facilitation Section -->
-  <section class="facilitation">
-    <h3>Our Facilitation</h3>
-    <div class="facilities">
-      <div class="facility">
-        <div class="circle"></div>
-        <p>Professional Teacher</p>
-      </div>
-      <div class="facility">
-        <div class="circle"></div>
-        <p>Sport Field</p>
-      </div>
-      <div class="facility">
-        <div class="circle"></div>
-        <p>Classroom</p>
-      </div>
+  <!-- About Section -->
+<section class="about">
+  <h2 class="section-title" data-aos="fade-down" data-aos-duration="1000">
+    <i class="fas fa-user"></i> About <span>Me</span>
+  </h2>
+
+  <div class="about-container">
+    <div class="about-image" data-aos="fade-right" data-aos-duration="1200">
+  <lottie-player
+    src="https://assets4.lottiefiles.com/packages/lf20_w51pcehl.json"
+    background="transparent"
+    speed="1"
+    style="width: 600px; height: auto;"
+    loop
+    autoplay>
+  </lottie-player>
+</div>
+    <div class="about-content" data-aos="fade-left" data-aos-duration="1200">
+      <h3>I'm Rayhan</h3>
+      <h4>Informatics Engineering Student</h4>
+      <p>
+        I am an Informatics Engineering student at Krisnadwipayana University with a strong passion for improving my coding and web development skills. Currently, I am focusing on front-end development and continuously learning to create responsive, interactive, and visually appealing user interfaces.
+      </p>
+      <p><strong>Email :</strong> <a href="mailto:rayhanalim04@gmail.com">rayhanalim04@gmail.com</a></p>
+      <p><strong>Place :</strong> Bekasi, Indonesia</p>
+      <a href="https://drive.google.com/file/d/16nt0qiv0kUtPasrDkMW5mynPoVS_keIG/view?usp=sharing" target="_blank" class="resume-btn">Resume ›</a>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills" id="skills">
+  <h2 class="section-title" data-aos="fade-down"><i class="fas fa-tools"></i> My <span>Skills</span></h2>
+  <div class="skills-grid">
+
+    <!-- Soft Skills -->
+<div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+  <h3><i class="fas fa-brain pulse"></i> Soft Skills</h3>
+  <ul>
+    <li data-aos="fade-right" data-aos-delay="150"><i class="fas fa-lightbulb"></i> Analysis Ability</li>
+    <li data-aos="fade-right" data-aos-delay="250"><i class="fas fa-user-check"></i> Critical Thinking</li>
+    <li data-aos="fade-right" data-aos-delay="350"><i class="fas fa-tools"></i> Problem Solving</li>
+    <li data-aos="fade-right" data-aos-delay="450"><i class="fas fa-comments"></i> Communication</li>
+    <li data-aos="fade-right" data-aos-delay="550"><i class="fas fa-users"></i> Teamwork</li>
+  </ul>
+</div>
+
+<!-- Software -->
+<div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+  <h3><i class="fas fa-laptop-code pulse"></i> Software</h3>
+  <ul>
+    <li data-aos="fade-right" data-aos-delay="250"><i class="fas fa-laptop"></i> Visual Studio Code</li>
+    <li data-aos="fade-right" data-aos-delay="350"><i class="fab fa-figma"></i> Figma</li>
+    <li data-aos="fade-right" data-aos-delay="450"><i class="fas fa-file-alt"></i> Microsoft Office</li>
+    <li data-aos="fade-right" data-aos-delay="550"><i class="fas fa-database"></i> phpMyAdmin</li>
+    <li data-aos="fade-right" data-aos-delay="650"><i class="fas fa-server"></i> XAMPP</li>
+  </ul>
+</div>
+
+<!-- Hard Skills -->
+<div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+  <h3><i class="fas fa-code pulse"></i> Hard Skills</h3>
+  <ul>
+    <li data-aos="fade-right" data-aos-delay="350"><i class="fab fa-html5"></i> HTML</li>
+    <li data-aos="fade-right" data-aos-delay="450"><i class="fab fa-css3-alt"></i> CSS</li>
+    <li data-aos="fade-right" data-aos-delay="550"><i class="fab fa-js-square"></i> JavaScript</li>
+    <li data-aos="fade-right" data-aos-delay="650"><i class="fas fa-pencil-ruler"></i> UI/UX Design</li>
+  </ul>
+</div>
+
+<!-- Languages -->
+<div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+  <h3><i class="fas fa-language pulse"></i> Languages</h3>
+  <ul>
+    <li data-aos="fade-right" data-aos-delay="450"><i class="fas fa-flag"></i> Indonesian (Native)</li>
+    <li data-aos="fade-right" data-aos-delay="550"><i class="fas fa-flag-usa"></i> English (Basic)</li>
+  </ul>
+</div>
+  </div>
+</section>
 
   <!-- Message Us Section -->
   <section class="message-us">
@@ -96,5 +161,49 @@
   </footer>
 
   <script src="js\script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2
+      }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "repulse" }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal().reveal('.hero-content', {
+    origin: 'bottom',
+    distance: '50px',
+    duration: 1000,
+    delay: 200,
+    easing: 'ease-in-out',
+    reset: true 
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>

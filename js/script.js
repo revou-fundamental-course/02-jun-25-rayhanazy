@@ -95,15 +95,6 @@ updateWidth();
 
 
 
-const links = document.querySelectorAll('.navbar a');
-
-links.forEach(link => {
-  link.addEventListener('click', function() {
-    links.forEach(l => l.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
-
 
 
 
@@ -143,6 +134,30 @@ links.forEach(link => {
 });
 
 
+
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navbar.classList.toggle("active");
+  });
+
+  // Optional: Scroll highlight active link
+  const links = document.querySelectorAll(".nav-link");
+  window.addEventListener("scroll", () => {
+    const fromTop = window.scrollY;
+    links.forEach(link => {
+      const section = document.querySelector(link.getAttribute("href"));
+      if (
+        section.offsetTop <= fromTop + 80 &&
+        section.offsetTop + section.offsetHeight > fromTop + 80
+      ) {
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      }
+    });
+  });
 
 
 

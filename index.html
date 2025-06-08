@@ -7,19 +7,38 @@
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
   <!-- Header dan Navbar -->
-  <header>
-    <div class="logo"><img src="img/logo-revou.png" alt="" /></div>
-    <nav class="navbar">
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
-  </header>
+  <header id="main-header" data-aos="fade-down" data-aos-duration="1000">
+  <div class="logo">
+     <lottie-player
+    src="https://assets10.lottiefiles.com/packages/lf20_j1adxtyb.json"
+    background="transparent"
+    speed="1"
+    style="width: 100px; height: auto;"
+    loop
+    autoplay>
+    </lottie-player>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#contact" class="nav-link">Contact Us</a>
+  </nav>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
 
   <!-- Hero Section -->
   <div class="hero" id="hero">
@@ -47,7 +66,7 @@
         <p>I am an Informatics Engineering student at Krisnadwipayana University with a strong passion for improving my coding and web development skills. Currently, I am focusing on front-end development and continuously learning to create responsive, interactive, and visually appealing user interfaces.</p>
         <p><strong>Email :</strong> <a href="mailto:rayhanalim04@gmail.com">rayhanalim04@gmail.com</a></p>
         <p><strong>Place :</strong> Bekasi, Indonesia</p>
-        <a href="https://drive.google.com/file/d/..." target="_blank" class="resume-btn">Resume ›</a>
+        <a href="https://drive.google.com/file/d/16nt0qiv0kUtPasrDkMW5mynPoVS_keIG/view?usp=sharing" target="_blank" class="resume-btn">Resume ›</a>
       </div>
     </div>
   </section>
@@ -128,7 +147,7 @@
       </div>
       <div class="form-group3">
         <i class="fas fa-phone"></i>
-        <input type="tel" id="phone" placeholder="Phone" required />
+        <input type="tel" id="phone" placeholder="Phone" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required />
       </div>
       <div class="form-group4">
         <i class="fas fa-comment-dots"></i>
@@ -181,12 +200,22 @@
         <p><i class="fas fa-envelope"></i> rayhanalim04@gmail.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Bekasi, Indonesia</p>
         <div class="socials">
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-github"></i>
-          <i class="fas fa-envelope"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fas fa-paper-plane"></i>
-        </div>
+          <a href="www.linkedin.com/in/rayhanalimfahrezy" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/rayhanazy" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:rayhanalim04@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://twitter.com/ryhnxcz" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://t.me/rayhann244" target="_blank" aria-label="Telegram">
+            <i class="fas fa-paper-plane"></i>
+          </a>
+</div>
       </div>
     </div>
 
@@ -201,16 +230,16 @@
   <script>
     particlesJS('particles-js', {
       particles: {
-        number: { value: 80 },
+        number: { value: 100 },
         color: { value: "#ffffff" },
         shape: { type: "circle" },
-        opacity: { value: 0.5 },
+        opacity: { value: 0.7 },
         size: { value: 3 },
         line_linked: {
           enable: true,
-          distance: 150,
+          distance: 200,
           color: "#ffffff",
-          opacity: 0.4,
+          opacity: 0.7,
           width: 1
         },
         move: { enable: true, speed: 2 }
@@ -236,7 +265,7 @@
   });
 
   ScrollReveal().reveal('.section-title', {
-    origin: 'top',
+    origin: 'bottom',
     distance: '80px',
     duration: 1000,
     delay: 200,
@@ -274,7 +303,7 @@
     origin: 'rigth',
     distance: '80px',
     duration: 1000,
-    delay: 500,
+    delay: 400,
     easing: 'ease-in-out',
     reset: true 
   });
@@ -282,7 +311,7 @@
     origin: 'rigth',
     distance: '80px',
     duration: 1000,
-    delay: 800,
+    delay: 600,
     easing: 'ease-in-out',
     reset: true 
   });
@@ -290,7 +319,7 @@
     origin: 'rigth',
     distance: '80px',
     duration: 1000,
-    delay: 1200,
+    delay: 800,
     easing: 'ease-in-out',
     reset: true 
   });
@@ -298,7 +327,7 @@
     origin: 'rigth',
     distance: '80px',
     duration: 1000,
-    delay: 1500,
+    delay: 1000,
     easing: 'ease-in-out',
     reset: true 
   });
@@ -307,7 +336,7 @@
     origin: 'bottom',
     distance: '80px',
     duration: 1000,
-    delay: 1800,
+    delay: 1200,
     easing: 'ease-in-out',
     reset: true 
   }); 
@@ -379,7 +408,7 @@
     origin: 'rigth',
     distance: '80px',
     duration: 1000,
-    delay: 500,
+    delay: 400,
     easing: 'ease-in-out',
     reset: true 
   });
@@ -388,7 +417,7 @@
     origin: 'rigth',
     distance: '80px',
     duration: 1000,
-    delay: 800,
+    delay: 600,
     easing: 'ease-in-out',
     reset: true 
   });
@@ -397,7 +426,7 @@
     origin: 'rigth',
     distance: '80px',
     duration: 1000,
-    delay: 1200,
+    delay: 800,
     easing: 'ease-in-out',
     reset: true 
   });
@@ -406,7 +435,7 @@
     origin: 'bottom',
     distance: '80px',
     duration: 1000,
-    delay: 1500,
+    delay: 1000,
     easing: 'ease-in-out',
     reset: true 
   });
@@ -466,6 +495,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>

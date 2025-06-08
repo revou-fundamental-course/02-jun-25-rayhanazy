@@ -12,7 +12,7 @@ html::-webkit-scrollbar-track {
   background: rgb(245, 238, 242);
 }
 html::-webkit-scrollbar-thumb {
-  background: rgb(252, 165, 255);
+  background: rgb(61, 61, 61);
 }
 section {
   scroll-margin-top: 80px; 

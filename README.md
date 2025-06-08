@@ -1,7 +1,7 @@
 # Portfolio-website
 Portfolio website built using HTML5, CSS3 and JavaScript.
 
-<a href="https://rayhanazy.netlify.app/" target="_blank">**Visit Now** 🚀</a>
+<a href="https://rayhann.netlify.app/" target="_blank">**Visit Now** 🚀</a>
 
 
 ## 📌 Tech Stack

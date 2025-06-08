@@ -19,7 +19,7 @@ setInterval(changeHeroBackground, 3000);
 
 
 
-// Elemen DOM
+// Efek ketik judul
 const heroTitle = document.getElementById("heroTitle");
 const userInput = document.getElementById("username");
 const heroDesc = document.getElementById("heroDesc");
@@ -95,9 +95,7 @@ updateWidth();
 
 
 
-
-
-
+// Smooth Scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -111,7 +109,6 @@ updateWidth();
       }
     });
   });
-
 
   window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('section');
@@ -134,7 +131,7 @@ updateWidth();
 });
 
 
-
+// Hamburger Menu
   const hamburger = document.getElementById("hamburger");
   const navbar = document.getElementById("navbar");
 

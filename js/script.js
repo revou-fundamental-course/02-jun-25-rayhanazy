@@ -8,8 +8,12 @@ const heroImages = [
 let heroIndex = 0;
 
 function changeHeroBackground() {
-  hero.style.backgroundImage = `url('${heroImages[heroIndex]}')`;
-  heroIndex = (heroIndex + 1) % heroImages.length;
+  const img = new Image();
+  img.src = heroImages[heroIndex];
+  img.onload = () => {
+    hero.style.backgroundImage = `url('${img.src}')`;
+    heroIndex = (heroIndex + 1) % heroImages.length;
+  };
 }
 
 changeHeroBackground(); 
@@ -132,29 +136,57 @@ updateWidth();
 
 
 // Hamburger Menu
-  const hamburger = document.getElementById("hamburger");
-  const navbar = document.getElementById("navbar");
+const hamburger = document.getElementById("hamburger");
+const navbar = document.getElementById("navbar");
 
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navbar.classList.toggle("active");
-  });
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navbar.classList.toggle("active");
+});
 
-  // Optional: Scroll highlight active link
-  const links = document.querySelectorAll(".nav-link");
-  window.addEventListener("scroll", () => {
-    const fromTop = window.scrollY;
-    links.forEach(link => {
-      const section = document.querySelector(link.getAttribute("href"));
-      if (
-        section.offsetTop <= fromTop + 80 &&
-        section.offsetTop + section.offsetHeight > fromTop + 80
-      ) {
-        links.forEach(l => l.classList.remove("active"));
-        link.classList.add("active");
-      }
-    });
+// Tutup navbar saat nav-link diklik
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navbar.classList.remove("active");
   });
+});
+
+// Optional: Scroll highlight active link
+const links = document.querySelectorAll(".nav-link");
+window.addEventListener("scroll", () => {
+  const fromTop = window.scrollY;
+  links.forEach(link => {
+    const section = document.querySelector(link.getAttribute("href"));
+    if (
+      section.offsetTop <= fromTop + 80 &&
+      section.offsetTop + section.offsetHeight > fromTop + 80
+    ) {
+      links.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    }
+  });
+});
+
+
+// Tutup navbar saat scroll halaman
+window.addEventListener("scroll", () => {
+  hamburger.classList.remove("active");
+  navbar.classList.remove("active");
+});
+
+// Tutup navbar saat klik di luar
+document.addEventListener("click", (e) => {
+  const isClickInsideNavbar = navbar.contains(e.target) || hamburger.contains(e.target);
+  if (!isClickInsideNavbar) {
+    hamburger.classList.remove("active");
+    navbar.classList.remove("active");
+  }
+});
+
+
 
 
 

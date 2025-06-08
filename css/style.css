@@ -95,8 +95,7 @@ header {
 
 /* Hover efek */
 .navbar a:hover {
-  background: linear-gradient(to right, #ff914d, #ffc371);
-    /* For compatibility */
+  background: linear-gradient(to right, #f77b2e, #ffc371);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -111,7 +110,7 @@ header {
 
 /* Link aktif */
 .navbar a.active {
-  color: #ff914d;
+  color: #f9a968;
   font-weight: bold;
   animation: pulseGlow 0.8s infinite alternate;
 }
@@ -172,17 +171,23 @@ header {
     top: 100%;
     right: 0;
     flex-direction: column;
-    background: white;
-    width: 200px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, rgb(107, 128, 157), rgb(221, 231, 245));
+    padding: 10px 200px 600px 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transform: translateX(100%);
     transition: transform 0.3s ease;
-    border-radius: 10px;
+    gap: 40px;
+  }
+
+  .navbar a {
+    font-size: 2.1rem;
+    margin: 20px 0 0 20px;
+    font-weight: bold;
   }
 
   .navbar.active {
     transform: translateX(0);
+    align-items: flex-start;
   }
 
   .hamburger {
@@ -210,11 +215,22 @@ header {
   }
 
   .navbar {
-    right: -20px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    background: linear-gradient(90deg, rgb(107, 128, 157), rgb(221, 231, 245));
+    padding: 10px 200px 600px 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    gap: 40px;
   }
 
   .navbar a {
-    font-size: 15px;
+    font-size: 2.1rem;
+    margin: 20px 0 0 20px;
+    font-weight: bold;
   }
 }
 
@@ -227,12 +243,11 @@ header {
   }
 
   .navbar {
-    top: 55px;
     right: -10px;
   }
 
   .navbar a {
-    font-size: 14px;
+    font-size: 1.8rem;
   }
 
   .hamburger span {
@@ -255,7 +270,11 @@ header {
 }
 /* Header Responsive Ends */
 
-/* Hero Starts */
+.spacer {
+  height: 150px;
+}
+
+/* Hero section Starts */
 #particles-js {
   position: absolute;
   width: 100%;
@@ -265,8 +284,8 @@ header {
   left: 0;
 }
 
-.hero {
-  margin: 150px 0 0 0;
+.hero { 
+  padding: 20px 40px;
   width: 100%;
   height: 578px;
   background-size: cover;
@@ -484,7 +503,9 @@ header {
 .section-title {
   text-align: center;
   font-size: 2.7rem;
-  margin-bottom: 80px;
+  padding-top: 100px;
+  
+  
 }
 
 .section-title i {
@@ -497,7 +518,7 @@ header {
 }
 
 .about {
-  padding: 100px 0 200px 0;
+  margin: 100px 0 200px 0;
   background-color: #ffffff;
   position: relative;
   z-index: 1;
@@ -545,6 +566,7 @@ header {
 
 .about-content a {
   text-decoration: none;
+  color: #000;
 }
 
 .resume-btn {
@@ -703,18 +725,18 @@ header {
 
 /* Skills Section */
 .skills {
-  padding: 150px 20px;
-  background: #e0eafc;
+  padding: 100px 20px;
+  background: linear-gradient(90deg, #e0eafc, rgb(107, 128, 157));
   text-align: center;
 }
 
-.section-title {
+.section-title1 {
   font-size: 32px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   color: #222;
 }
 
-.section-title span {
+.section-title1 span {
   color: #0077cc;
 }
 
@@ -728,10 +750,10 @@ header {
 
 .skill-card1, .skill-card2, .skill-card3, .skill-card4 {
   text-align: left;
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
   padding: 20px 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -912,11 +934,26 @@ header {
 }
 /* Skills Responsive Ends*/
 
+.space {
+  height: 120px;
+  background: #f5f5f5;
+}
+
 /* Contact Section */
 .contact {
   background: #f5f5f5;
-  padding: 60px 20px;
+  padding: 100px 20px;
   text-align: center;
+}
+
+.section-title2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 80px;
+}
+
+.section-title2 span {
+  color: #0077cc;
 }
 
 .contact-container {
@@ -925,7 +962,7 @@ header {
   justify-content: center;
   gap: 40px;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   margin: 0 300px;
   border-radius: 12px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
@@ -954,6 +991,7 @@ form {
   margin-bottom: 20px;
   background: #eef3ff;
   border-radius: 8px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
 
@@ -1003,6 +1041,7 @@ textarea {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
 .submit-btn:hover {

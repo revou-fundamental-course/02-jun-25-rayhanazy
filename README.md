@@ -11,4 +11,4 @@ Portfolio website built using HTML5, CSS3 and JavaScript.
 <img alt="jQuery" src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white"/>
 
 ### Extras : 
-Particles.js, ScrollReveal, AOS (Animate on Scroll), Lottie Player, Font Awesome and JSON
+Particles.js, ScrollReveal, AOS (Animate on Scroll), Lottie Player and Font Awesome
